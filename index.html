@@ -43,7 +43,6 @@
 
         // 언어 변경 토글 기능
         function setLanguage(lang) {
-            // body의 클래스를 변경하여 CSS로 텍스트를 숨기고 보여줌
             document.body.className = `antialiased flex flex-col min-h-screen ${lang}`;
             
             const btnEn = document.getElementById('lang-en');
@@ -92,7 +91,10 @@
         </div>
     </nav>
 
-    <main class="flex-grow flex flex-col justify-center items-center text-center px-4 py-20">
+    <main class="flex-grow flex flex-col justify-center items-center text-center px-4 py-12">
+        
+        <img src="starbucks.png" alt="$STARBUCKS Logo" class="w-48 h-48 md:w-56 md:h-56 object-contain mb-8 rounded-full drop-shadow-[0_0_25px_rgba(0,112,74,0.6)]">
+
         <div class="inline-block bg-sbux text-white font-bold px-4 py-1 rounded-full mb-6 text-sm uppercase tracking-wider">
             <span class="en">The Free Market Memecoin</span>
             <span class="ko">자유 시장 밈코인</span>
@@ -121,6 +123,24 @@
                 <span class="ko">Pump.fun에서 매수</span>
             </a>
         </div>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm md:text-base font-bold text-gray-300">
+            <div class="flex items-center gap-2 bg-gray-800/80 px-4 py-2 rounded-full border border-gray-700 shadow-sm">
+                <span class="text-green-400">✅</span>
+                <span class="en">Dev Sold</span>
+                <span class="ko">개발자 매도 완료</span>
+            </div>
+            <div class="flex items-center gap-2 bg-gray-800/80 px-4 py-2 rounded-full border border-gray-700 shadow-sm">
+                <span class="text-red-400">🚫</span>
+                <span class="en">No Bundle</span>
+                <span class="ko">번들(다계정) 없음</span>
+            </div>
+            <div class="flex items-center gap-2 bg-gray-800/80 px-4 py-2 rounded-full border border-gray-700 shadow-sm">
+                <span class="text-blue-400">💎</span>
+                <span class="en">Pure Free Market</span>
+                <span class="ko">완전한 자유 시장</span>
+            </div>
+        </div>
     </main>
 
     <section class="bg-gray-900 border-t border-b border-gray-800 py-16 px-4">
@@ -131,8 +151,8 @@
                 <span class="ko">러그풀 대신 머그잔을</span>
             </h2>
             <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
-                <span class="en">100% of Creator Rewards will be used to airdrop Starbucks Gift Cards weekly to our community on X (Twitter).</span>
-                <span class="ko">크리에이터 수익의 100%는 매주 X(트위터) 커뮤니티를 위한 스타벅스 기프트카드 에어드랍에 사용됩니다.</span>
+                <span class="en">A portion of the Creator Rewards will be used to airdrop Starbucks Gift Cards weekly to our community on X (Twitter).</span>
+                <span class="ko">크리에이터 수익의 일부는 매주 X(트위터) 커뮤니티를 위한 스타벅스 기프트카드 에어드랍에 사용됩니다.</span>
             </p>
             <a href="https://x.com/StarbucksTank" class="inline-flex items-center gap-2 border border-sbux text-sbux hover:bg-sbux hover:text-white transition font-bold py-2 px-6 rounded-lg">
                 <span class="en">Follow X for Airdrops</span>
