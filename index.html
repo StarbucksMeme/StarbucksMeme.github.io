@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$STARBUCKS - Sip Capitalism</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sbux: '#00704A', // 스타벅스 시그니처 그린
+                        sbuxdark: '#005c3d',
+                        darkbg: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+        // 컨트랙트 주소 복사 기능
+        function copyCA() {
+            const ca = "YOUR_CONTRACT_ADDRESS_HERE";
+            navigator.clipboard.writeText(ca).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.innerText = "Copied! ☕";
+                setTimeout(() => { btn.innerText = "Copy CA"; }, 2000);
+            });
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: white;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 112, 74, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto w-full">
+        <div class="text-2xl font-black tracking-tighter text-white glow-text">
+            ☕ $STARBUCKS
+        </div>
+        <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex flex-col justify-center items-center text-center px-4 py-20">
+        <div class="inline-block bg-sbux text-white font-bold px-4 py-1 rounded-full mb-6 text-sm uppercase tracking-wider">
+            The Free Market Memecoin
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            SIP CAPITALISM. <br>
+            <span class="text-sbux glow-text">STOP THE FUD.</span>
+        </h1>
+        
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            We stand against state-sponsored FUD and the witch hunt on corporations. 
+            This memecoin was built to support the brand we love. Reject the mob, drink your coffee.
+        </p>
+
+        <!-- CA / Buy Section -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto">
+            <div class="bg-gray-800 border border-gray-700 px-4 py-3 rounded-lg flex justify-between items-center w-full">
+                <span class="text-gray-400 font-mono text-sm truncate">YOUR_CONTRACT_ADDRESS_HERE</span>
+                <button id="copyBtn" onclick="copyCA()" class="ml-4 text-sbux hover:text-white transition font-bold text-sm shrink-0">
+                    Copy CA
+                </button>
+            </div>
+            <a href="https://pump.fun" target="_blank" class="w-full sm:w-auto bg-sbux hover:bg-sbuxdark text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 shadow-lg shadow-sbux/30">
+                Buy on Pump.fun
+            </a>
+        </div>
+    </main>
+
+    <!-- Reward / Mission Section -->
+    <section class="bg-gray-900 border-t border-b border-gray-800 py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="text-4xl mb-4">🎁 ☕</div>
+            <h2 class="text-3xl font-black mb-4">No Rug, Just Mugs</h2>
+            <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+                100% of Creator Rewards will be used to airdrop Starbucks Gift Cards weekly to our community on X (Twitter).
+            </p>
+            <a href="#" class="inline-flex items-center gap-2 border border-sbux text-sbux hover:bg-sbux hover:text-white transition font-bold py-2 px-6 rounded-lg">
+                Follow X for Airdrops <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500 text-sm">
+        <p>© 2026 $STARBUCKS Memecoin. Built for the free market.</p>
+        <p class="mt-2 text-xs">Disclaimer: $STARBUCKS is a memecoin with no intrinsic value. We are not officially affiliated with Starbucks Corporation.</p>
+    </footer>
+
+</body>
+</html>
